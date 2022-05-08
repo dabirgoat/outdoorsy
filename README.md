@@ -7,9 +7,7 @@ Outdoor.sy
 * PostgreSQL version : 14.2
 
 * Configuration
-
-    
-     
+ 
      -The below commands will only work on Mac OS. Non-mac users 
       can read here: https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/
 
@@ -46,26 +44,26 @@ Outdoor.sy
 
     -We will be running our commands in rails console, so the first step is to initialize it:
 
-    `rails console`
+        rails console
     
     -Next, we must instantiate an instance of OurdoorsyHelpers and assign it to a variable:
 
-    `helper = OutdoorsyHelpers.new`
+        helper = OutdoorsyHelpers.new
     
     -Finally, we can call our function in one of three ways:
 
-        -Display all users stored in the table:
-        `helper.getUsers()` 
+        //Display all users stored in the table:
+        helper.getUsers() 
 
-        -Display all users sorted by full name in ascending order:
-        `helper.getUsers("name")` 
+        //Display all users sorted by full name in ascending order:
+        helper.getUsers("name")
 
-        -Display all users sorted by vehicle type in ascending order:
-        `helper.getUsers("vehicle")` 
+        //Display all users sorted by vehicle type in ascending order:
+        helper.getUsers("vehicle")
 
 * Retrospective
 
-        This was my first time using Ruby on Rails, I enjoyed learning the basics quite a bit!
+    This was my first time using Ruby on Rails, I enjoyed learning the basics quite a bit!
     In a production setting, the database as well as the application would likely be hosted
     on some sort of cloud provider. In this case I would likely leverage environment variables
     and secret keys to auth into the database instead of hosting it locally. 
