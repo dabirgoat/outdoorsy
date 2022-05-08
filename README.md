@@ -12,9 +12,9 @@ Outdoor.sy
      
      -The below commands will only work on Mac OS.
      -Non-mac users can read here: https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/
-     `brew install postgresql`
+        `brew install postgresql`
 
-     `brew services start postgresql`
+        `brew services start postgresql`
 
 * Database creation & population
 
