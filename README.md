@@ -24,20 +24,20 @@ Outdoor.sy
     -To persist data in PostgresSQL, we can use a few Rakefile commands built
      into Rails:
 
-        -Navigate to wanderlust directory:
-        `cd wanderlust`
+        //Navigate to wanderlust directory
+        cd wanderlust
 
-        -Drops any current instances of databases specified in ./config/database.yml:
-        `rake db:drop`
+        //Drops any current instances of databases specified in ./config/database.yml
+        rake db:drop
 
-        -Creates databases as specified in ./config/database.yml:
-        `rake db:create`
+        //Creates databases as specified in ./config/database.yml
+        rake db:create
 
-        -Migrates existing schema, see ./db/migrate/ & ./db/schema.rb: 
-        `rake db:migrate` 
+        //Migrates existing schema, see ./db/migrate/ & ./db/schema.rb 
+        rake db:migrate 
 
-        -Populates our new databases with seed data from our input files, see ./db/seeds.rb:
-        `rake db:seed` 
+        //Populates our new databases with seed data from our input files, see ./db/seeds.rb
+        rake db:seed 
 
 * Displaying data
 
