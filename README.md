@@ -8,11 +8,13 @@ Outdoor.sy
 
 * Configuration
 
-    -Ensure you have postgres installed and running on your local machine:
+    
      
      -The below commands will only work on Mac OS. Non-mac users 
-      can read here: https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/ :
+      can read here: https://www.postgresqltutorial.com/postgresql-getting-started/install-postgresql/
       
+     -Ensure you have postgres installed and running on your local machine:
+
         `brew install postgresql`
 
         `brew services start postgresql`
