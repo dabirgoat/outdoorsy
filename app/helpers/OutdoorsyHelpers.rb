@@ -25,9 +25,9 @@ class OutdoorsyHelpers
                 email = res[1]
                 vehicleType = res[2]
                 vehicleName = res[3]
-                vehicleLength = res[4].to_i >= 12 ? res[4] + ' inches (' + (res[4].to_f / 12).truncate(1).to_s + 'ft)': res[4] + ' inches'
+                vehicleLength = res[4] + ' ft'
 
-                puts fullName + ' ' + email + ' ' + vehicleType + ' ' + vehicleName + ' ' + vehicleLength
+                puts fullName + ' | ' + email + ' | ' + vehicleType + ' | ' + vehicleName + ' | ' + vehicleLength
                 puts "\n"
 
             end
