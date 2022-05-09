@@ -16,6 +16,9 @@ optional ordering parameters.
         //Navigate to wanderlust directory
         cd wanderlust
 
+        //Install dependencies
+        bundle install
+
         //Drops any current instances of databases specified in ./config/database.yml
         rake db:drop
 
