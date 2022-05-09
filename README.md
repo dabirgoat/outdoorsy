@@ -2,6 +2,9 @@
 
 Outdoor.sy
 
+The Outdoor.sy app takes in user data and displays it back, with certain
+optional ordering parameters.
+
 * Ruby version : 3.1.2 (https://gorails.com/setup/osx/12-monterey)
 * Rails version : 7.0.2.4 (^)
 
