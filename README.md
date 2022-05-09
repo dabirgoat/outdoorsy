@@ -10,7 +10,7 @@ optional ordering parameters.
 
 * Database creation & population
 
-    -To persist data in PostgresSQL, we can use a few Rakefile commands built
+    -To persist data in sqlite3, we can use a few Rakefile commands built
      into Rails:
 
         //Navigate to wanderlust directory
