@@ -1,4 +1,4 @@
-require 'pg'
+require 'sqlite3'
 
 class OutdoorsyHelpers
     def getUsers(sortBy = nil)
@@ -14,23 +14,23 @@ class OutdoorsyHelpers
         puts "\nFull Name | Email | Vehicle Type | Vehicle Name | Vehicle Length"
         puts "\n"
 
-        filter = sortBy != nil ? (sortBy == "name" ? "ORDER BY full_name ASC" : "ORDER BY vehicle_type ASC" ): ""
+        filter = sortBy != nil ? (sortBy == "name" ? "ORDER BY lower(full_name) ASC" : "ORDER BY lower(vehicle_type) ASC" ): ""
         query =  ("SELECT * from outdoorsy_users " + filter).strip
 
-        conn = PG.connect(:dbname => 'wanderlust_development')
-        conn.exec(query + ";") do |result| 
-            result.each do |row| 
-                res = row.values_at('full_name', 'email', 'vehicle_type', 'vehicle_name', 'vehicle_length')
-                fullName = res[0]
-                email = res[1]
-                vehicleType = res[2]
-                vehicleName = res[3]
-                vehicleLength = res[4] + ' ft'
+       
+        db = SQLite3::Database.open 'wanderlust_development'
+        results = db.query query
+        results.each { |row| 
+            fullName = row[1]
+            email = row[4]
+            vehicleType = row[5]
+            vehicleName = row[6]
+            vehicleLength = row[7].to_s + ' ft'
 
-                puts fullName + ' | ' + email + ' | ' + vehicleType + ' | ' + vehicleName + ' | ' + vehicleLength
-                puts "\n"
+            puts fullName + ' | ' + email + ' | ' + vehicleType + ' | ' + vehicleName + ' | ' + vehicleLength
+            puts "\n"
+    
+        }
 
-            end
-        end
      end
 end
